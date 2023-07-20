@@ -4,7 +4,7 @@ const newuserModel = require('../models/newuser.model')
 const SECRET_KEY = "MYSECRETKEY"
 
 const auth = async (req, res, next) => {
-  const token = req.headers["token"];
+  const token = req.headers["authorization"].split(' ')[1];
   if (!token) {
     return res.status(403).send("A token is required for authentication");
   }

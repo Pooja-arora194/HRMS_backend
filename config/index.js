@@ -1,9 +1,10 @@
-import dotenv from 'dotenv';
+
+const dotenv = require('dotenv');
 
 dotenv.config();
 
-export const {
-    DATABASE_URI, 
-    APP_URL
-    
+module.exports = {
+    DATABASE_URI,
+    APP_URL,
+    PORT
 } = process.env;
